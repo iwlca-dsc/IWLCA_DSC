@@ -1,0 +1,127 @@
+body {
+    font-family: GothamNarrow, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.417;
+}
+a{
+    text-decoration: none;
+    color: #81bc00;
+}
+.mainContainer{
+  width: 345px;
+  margin: 0 auto;
+}
+a.navbar-brand{
+padding: 0;
+color: #009dd9;
+font-size: 24px;
+font-weight: 900;
+font-family: Gotham, "Helvetica Neue", Helvetica, Roboto, Arial, serif;
+float: none; /****1 to align the image in the center*/
+text-decoration: none;
+}
+a.navbar-brand img{
+  display: block;
+    margin: 0 auto;
+    padding-bottom: 22px !important;
+}
+input{
+  width: 257px;
+  height: 30px;
+  /*font-size: 15px;*/
+  font-family: GothamNarrow, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  /*padding: 15px 10px;*/
+   border: 1px solid #ccc;
+}
+input:focus{
+  outline: none;
+  border-color: #9ecaed;
+  /*box-shadow: 0 0 10px #9ecaed;*/
+  box-shadow: 0 0 10px #009dd9;
+}
+
+header#header{
+  /*border-bottom: 1px solid #f2f2f2;*/
+  padding-bottom: 28px;
+}
+.body-wrapper.login-page{
+  background: #fff;
+  min-height: 716px;
+  background-image: url("../images/login_bg.png");
+  background-repeat: no-repeat;
+  background-size:100% auto;
+  background-color: black;
+}
+.pageHeading {
+    padding: 0;
+    color: #81bc00;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Roboto, Arial, serif
+}
+.btn-primary {
+    width: 214px;
+    height: auto;
+    padding: 12px 20px;
+    border: 0;
+    color: #fff;
+    background-color: #81bc00;
+}
+.navbar-header{
+  width: 100%;
+  text-align: center;
+  padding: 22px 20px 0;
+}
+.footer{
+  color: #fff;
+  font-size: 11px;
+  background-color: #6b6d6f;
+  text-align:center;
+}
+.footer .text-center{
+  padding: 26px 0;
+}
+.footer .text-center ul {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+.footer .text-center ul li {
+    display: inline;
+    margin: 0 3px;
+}
+.footer .text-center ul li a{
+  color: #fff;
+  text-decoration: underline;
+}
+.footer .text-center > div{
+  display: inline;
+  margin: 6px;
+}
+
+/*
+input::-webkit-input-placeholder{
+    text-align: center;
+    color: #383838;
+    font-family: GothamNarrow, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+input::-moz-placeholder{
+    text-align: center;
+    color: #383838;
+}
+input::-ms-input-placeholder{
+    text-align: center;
+    color: #383838;
+}
+*/
+.bootstrap-select > .dropdown-toggle .fa {
+    color: #8c8f93;
+}
+.display-table{
+  display: table;
+}
+@media screen and (max-width:1023px) {
+  .footer .text-center > div {
+      display: block;
+  }
+}

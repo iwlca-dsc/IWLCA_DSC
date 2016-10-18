@@ -1,0 +1,60 @@
+/*common css files used across the application*/
+/*Load this file in all the individual Page level files*/
+body {
+    font-family: GothamNarrow, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.417;
+}
+
+.xs-mt-30{
+  margin-top: 30px;
+}
+.xs-mb-5{
+  margin-bottom: 5px;
+}
+.xs-mt-15{
+  margin-top: 15px;
+}
+.xs-mt-35{
+  margin-top: 35px;
+}
+.xs-mt-20{
+  margin-top: 20px;
+}
+.xs-mt-45{
+  margin-top: 45px;
+}
+.xs-mt-60{
+  margin-top: 60px;
+}
+.content-box {
+    padding: 0 22px 20px;
+    min-height: 450px;
+}
+img.icon{
+  /*width:30%;*/
+}
+img.icon.enabled{
+    height: 37px;
+}
+.heading.icon{
+  height: 42px;
+  /*margin: 17px;*/
+}
+.pageHeading {
+    background-color: black;
+    height: 70px;
+    padding: 14px;
+}
+.heading-font{
+  color:#fff;
+  font-size: 24px;
+}
+span.list-group-item {
+    font-weight: bold;
+    color: #81bc00;
+    font-size: 20px;
+}
+span.list-group-item:first-child{
+  background-color: black;
+}
