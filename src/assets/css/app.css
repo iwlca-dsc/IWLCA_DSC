@@ -57,3 +57,6 @@ span.list-group-item {
 span.list-group-item:first-child{
   background-color: black;
 }
+input:focus{
+    outline: none;
+}
