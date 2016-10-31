@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
+    <title>Artifacts</title>
     <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/custom-bootstrap.css" type='text/css'>
     <link rel='stylesheet' href="./assets/css/app.css" type='text/css'>
@@ -14,34 +14,122 @@
 <body>
     <div class='body-wrapper'>
         <header class="main-header main-header-md js-header" style="">
-            <div class="pageHeading text-center">
-                <img alt="" class="heading icon pull-left" src="./assets/images/connect.png">
+            <div class="pageHeading">
+                <img alt="" class="heading icon" src="./assets/images/connect.png">
                 <!--<span class="heading-font">Energy and Resources Analytics Portal</span>-->
-                <input type="text" placeholder="Search for special artifact" style="border-radius: 18px;font-size: 17px;font-weight: normal;width: 47%;height:100%">
+                <!--<input type="text" placeholder="Search for special artifact..." style="border-radius: 18px;font-size: 13px;font-weight: normal;width: 25%;height:100%">-->
+                <!--  <div class="bs-searchbox">-->
+                <div class="bs-searchbox" style="position:relative;width: 25%;height: 100%;display: inline-flex;margin-left: 31%;">
+              <!--<i class="fa fa-search" aria-hidden="true">-->
+                  <input type="text" placeholder="Search for special artifact..." class="form-control" autocomplete="off" style="/* margin-left: 35%; */border-radius: 10px;/* width: 61%; */float: left;">
+                <!--  </i>-->
+              </div>
+                <!--  </div>-->
                 <img alt="" class="heading icon pull-right" src="./assets/images/deloitte_logo.png">
             </div>
         </header>
         <div class='content-box'>
-          <!--  <div class="row">-->
-                <!--<div class="col-xs-24 col-sm-8 pull-left">-->
-                <img alt="" class="" src="./assets/images/artifact_circle.png" style="width:60%">
-                <!--</div>-->
-                <div class="col-xs-24">
-                    <div class="list-group">
-                        <span class="list-group-item text-center">
-                          <span style="color:#fff">Upstream Well Lifecycle</span>
-                        </span>
-                        <div class="list-group-item">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                            specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                            passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                    </div>
-                    <div class="list-group">
-                      <span class="list-group-item text-center">
-                        <span style="color:#fff">Foundational</span>
-                      </span>
-                      <div class="list-group-item">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+            <div class="50-50-component-div xs-mt-60">
+                <div class="xs-pt-20">
+                    <div class="left-50-asset-block">
+                        <div class="asset-block text-center">
+                            <!--<img src="http://bodyworks.com/wp-content/themes/silver-quantum/images/bodyworks_cats.jpg" class="img-responsive" alt="" />-->
+                            <img alt="" class="image-map" src="./assets/images/wm1.png" usemap="#wheelMap">
+                            <map name="wheelMap">
+                              <!--Exploration (BLUE)-->
+                              <area shape="poly" id="exploration"
+                              coords="238,22,275,22,305,26,337,34,365,46,389,57,417,76,407,106,397,132,370,153,344,170,308,152,268,143,247,143,255,112,262,82,248,51"
+                              alt="Exploration"
+                              title="Exploration"
+                              data-id="exploration"
+                              class="areaTag" />
+                              <!--Planning (GREEN)-->
+                              <area shape="poly" id="planning"
+                              coords="418,79,410,99,404,115,396,131,384,144,369,154,354,165,342,172,355,186,364,198,374,214,378,228,382,243,386,256,404,263,420,268,438,271,458,268,476,260,491,251,504,245,429,89,439,99,448,110,458,120,466,131,474,144,481,156,487,169,493,183,497,197,501,211,505,226"
+                              alt="Planning"
+                              title="Planning"
+                              data-id="planning"
+                              class="areaTag" />
+                              <!--Reserves (SKY BLUE)_____ NEEDS EDIT FOR coordinates-->
+                              <area shape="poly" id="reserves"
+                              coords="357,352,369,335,379,317,384,297,386,279,386,263,401,264,418,267,436,271,449,272,470,262,489,254,504,246,506,258,506,273,506,288,504,305,501,325,496,342,491,358,484,372,475,391,466,406,456,419,449,429,435,422,421,417,409,411,399,408,391,405,384,394,378,384,370,374,363,364"
+                              alt="Reserves"
+                              title="Reserves"
+                              data-id="reserves"
+                              class="areaTag" />
+                              <!--Land (DARK GREEN)-->
+                              <area shape="poly" id="land"
+                              coords="355,351,343,366,328,376,312,384,297,390,280,394,270,396,265,414,261,431,258,445,255,457,262,469,266,485,272,494,278,509,284,516,299,515,315,511,333,506,351,500,365,494,375,487,390,479,402,472,414,464,422,457,433,447,442,437,448,429,438,422,422,417,410,412,399,407,390,404,383,392,374,378,365,365"
+                              alt="Land"
+                              title="Land"
+                              data-id="land"
+                              class="areaTag"/>
+                              <!--Drilling (GREY)-->
+                              <area shape="poly" id="drilling"
+                              coords="269,396,246,396,223,391,200,382,185,372,176,365,160,377,145,387,131,396,120,406,116,422,109,435,102,456,116,471,130,481,145,489,162,497,178,503,195,509,211,511,230,515,250,518,269,518,282,514,273,495,265,477,258,459,259,439,266,418"
+                              alt="Drilling"
+                              title="Drilling"
+                              data-id="drilling"
+                              class="areaTag" />
+                              <!--Production & Operations (SKY BLUE)-->
+                              <area shape="poly" id="prodOpn"
+                              coords="176,366,160,348,145,326,138,301,133,281,114,274,93,268,74,266,54,275,35,283,15,293,15,310,19,327,24,345,31,363,38,380,48,400,58,412,70,428,81,442,93,452,103,449,111,433,116,418,123,401,142,387,160,375,101,458"
+                              alt="Production & Operations"
+                              title="Production & Operations"
+                              data-id="prodOpn"
+                              class="areaTag" />
+                              <!--Asset Management (BLACK)-->
+                              <area shape="poly" id="assetMgmt"
+                              coords="134,276,134,256,138,235,144,218,152,201,162,188,153,173,144,159,136,146,129,136,114,129,93,122,80,117,68,111,56,127,49,142,40,157,33,172,28,184,22,199,18,214,14,233,13,248,11,263,13,278,13,291,26,285,36,282,48,277,61,270,71,266,81,267,98,271,114,275"
+                              alt="Asset Management"
+                              title="Asset Management"
+                              data-id="assetMgmt"
+                              class="areaTag" />
+                              <!--Finance (GREEN)-->
+                              <area shape="poly" id="finance"
+                              coords="163,187,177,175,194,160,215,152,233,147,247,142,253,124,256,108,260,90,258,73,252,58,244,44,238,26,223,24,204,28,184,33,168,40,153,47,138,53,125,62,111,71,99,82,84,93,76,103,69,111,82,118,95,120,109,126,127,131,135,143,143,155,151,167,158,177"
+                              alt="Finance"
+                              title="Finance"
+                              data-id="finance"
+                              class="areaTag" />
+                            </map>
+                        </div>
+
+                        <div class="text-block xs-mt-60">
+                            <div class="list-group">
+                                <span class="list-group-item artifact text-center">
+                                  <span style="vertical-align:middle">
+                                    <img alt="" id="artifactImg" class="icon artifactImg pull-left">
+                                    <span style="color:#fff" id="tileHeading">Upstream Well Lifecycle</span>
+                                  </span>
+                                </span>
+                                <div class="list-group-item">The Well Lifecycle Analytics Portal is an interactive site to find timely and relevant artifacts – Accelerators, Use Cases, Demos – to show to internal and external sources<br/>
+                                    <ul style="list-style-type:square" id="tileData">
+                                        <li id="bulletOne">Click on one of the sections around the Well Lifecycle to access artifacts</li>
+                                        <li id="bulletTwo">You can also search using the search bar at the top of the page to search for specific artifacts based on key word tags</li>
+                                        <li id="noBullet">Finally, you can also click on one of the tiles below to pull up artifacts associated that foundational area</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--  <div class="list-group">
+                                <span class="list-group-item text-center">
+                                  <span style="color:#fff">Foundational</span>
+                                </span>
+                                <div class="list-group-item"></div>
+
+                            </div>-->
+                            <div class="list-group">
+                                <span class="list-group-item text-center">
+                                <span style="color:#fff">Foundational</span>
+                                </span>
+                                <div class="list-group-item text-center pull-left" style="height:100px;width:30%;margin-right: 13px;">Data Management</div>
+                                <div class="list-group-item text-center pull-left" style="height:100px;width:30%;margin-right: 13px;">Advanced Analytics</div>
+                                <div class="list-group-item text-center pull-left" style="height:100px;width:30%;min-height:0;">Digital Transformation</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
             <!--</div>-->
         </div>
@@ -49,6 +137,100 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="./assets/js/jquery.js"></script>
+    <script type="text/javascript">
+        function populateRightTile(header, data1, data2, desc) {
+            $('#tileHeading').html(header);
+            $('#bulletOne').html(data1);
+            $('#bulletTwo').html(data2);
+            $('#noBullet').html(desc);
+        }
+        $('.areaTag').on('click mouseover', function(e) {
+            //alert('hovered,clicked');
+            console.log('e:', e.type);
+            $('.areaTag').hover(function() {
+                var areaID = $(this).attr('id');
+                var image = $('#artifactImg');
+                switch (areaID) {
+                    case "exploration":
+                        //image.removeClass($('#artifactImg').attr('class').split(" ")[2]);
+                        image.attr('src', './assets/images/icons/exploration.png');
+                        populateRightTile(
+                            "Exploration",
+                            "Do you efficiently govern large geophysical data?",
+                            "Does the data drive or contribute to exploration efforts?",
+                            "Exploration analytics is aimed at reducing finding costs for an organization."
+                        );
+                        break;
+                    case "planning":
+                        image.attr('src', './assets/images/icons/planning.png');
+                        populateRightTile(
+                            "Planning",
+                            "Do you establish well planning control?",
+                            "Are assets efficiently tracked?",
+                            "Planning analytics is aimed at maximizing return on investments for the planning phase of an upstream organization."
+                        );
+                        break;
+                    case "reserves":
+                        image.attr('src', './assets/images/icons/reserves.png');
+                        populateRightTile(
+                            "Reserves",
+                            "Do you establish well planning control?",
+                            "Are assets efficiently tracked?",
+                            "Reserves analytics is aimed at how to replenish reserves for long term value for an organization."
+                        );
+                        break;
+                    case "land":
+                        image.attr('src', './assets/images/icons/land.png');
+                        populateRightTile(
+                            "Land",
+                            "Do you rightly handle settlements?",
+                            "Are there delays in land approvals?",
+                            "Planning analytics is aimed at mitigating regulatory risk and maximizing land usage for an organization."
+                        );
+                        break;
+                    case "drilling":
+                        image.attr('src', './assets/images/icons/drilling.png');
+                        populateRightTile(
+                            "Drilling",
+                            "Do you establish well planning control?",
+                            "Are assets efficiently tracked?",
+                            "Drilling analytics is aimed at how to safely increase efficiency of drilling within a drilling organization."
+                        );
+                        break;
+                    case "prodOpn":
+                        image.attr('src', './assets/images/icons/prodOpn.png');
+                        populateRightTile(
+                            "Production and Operation",
+                            "Is master production data accurate?",
+                            "Is there end to end view of volumes?",
+                            "Production and Operation analytics is aimed at maximizing production and lowering operational costs for an organization."
+                        );
+                        break;
+                    case "assetMgmt":
+                        image.attr('src', './assets/images/icons/assetMgmt.png');
+                        populateRightTile(
+                            "Asset Management",
+                            "Do you use data to predict downtimes?",
+                            "Are there any operational guidelines?",
+                            "Asset Management analytics is aimed at how to more proactively maintain assets while improving productivity and safety for an organization."
+                        );
+                        break;
+                    case "finance":
+                        image.attr('src', './assets/images/icons/finance.png');
+                        populateRightTile(
+                            "Finance",
+                            "What are the factors affecting AFE?",
+                            "Are project risks proactively handled?",
+                            "Finance analytics is aimed at how to maximize revenue of an upstream Finance organization."
+                        );
+                        break;
+                    default:
+
+                }
+            });
+        });
+        /**/
+    </script>
 </body>
 
 </html>

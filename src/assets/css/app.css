@@ -36,6 +36,33 @@ img.icon{
 img.icon.enabled{
     height: 37px;
 }
+img.icon.artifactImg {
+  /*  height: 55px;
+    padding-bottom: 6px;
+    top: 0;*/
+    width: 61px;
+}
+/*img.icon.enabled.exploration{
+  background-image: url('images/icons/exploration.png');
+}*/
+/*img#test.icon.enabled.exploration{
+ background-color: black;
+  height: 50px;
+  width: 50px;
+  background-image: url('../images/icons/exploration.png');
+}
+img#test.icon.enabled.planning{
+  background-color: green;
+  height: 50px;
+  width: 50px;
+  background-image: url('../images/icons/planning.png');
+}*/
+ul > li{
+  padding-top: 10px;
+}
+#noBullet{
+  list-style-type: none;
+}
 .heading.icon{
   height: 42px;
   /*margin: 17px;*/
@@ -54,9 +81,76 @@ span.list-group-item {
     color: #81bc00;
     font-size: 20px;
 }
+span.list-group-item.artifact:first-child{
+  padding-bottom: 33px;
+}
 span.list-group-item:first-child{
   background-color: black;
 }
 input:focus{
     outline: none;
+}
+.left-50-asset-block {
+  width: 100%;
+  clear: both;
+  *zoom: 1;
+}
+.left-50-asset-block::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.left-50-asset-block::before {
+  content: "";
+  display: table;
+}
+.left-50-asset-block .asset-block {
+  float: left;
+  width: 60%;
+  position: relative;
+}
+.left-50-asset-block .text-block {
+  float: right;
+  width: 40%;
+  padding-left: 15px;
+}
+.left-50-asset-block .text-block .date-text {
+  font-size: 9px;
+  padding-bottom: 5px;
+}
+.left-50-asset-block .text-block .sub-heading {
+  padding-bottom: 5px;
+  color: #6b6d6f;
+}
+.left-50-asset-block .text-block .component-body-text {
+  padding-bottom: 5px;
+  font-size: 13px;
+}
+.overlay{
+    vertical-align: middle;
+    z-index: 18;
+    width: 93%;
+    height: 93%;
+    opacity: 0.8;
+    font-size: 23px;
+    background: #808080;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    padding: 100px;
+    letter-spacing: 10px;
+}
+.bs-searchbox::after {
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f002";
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    padding: 10px;
+    color: #81bc00;
+    font-size: 23px;
 }
