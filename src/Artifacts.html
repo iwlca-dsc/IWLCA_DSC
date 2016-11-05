@@ -15,7 +15,7 @@
     <div class='body-wrapper'>
         <header class="main-header main-header-md js-header" style="">
             <div class="pageHeading">
-                <img alt="" class="heading icon" src="./assets/images/connect.png">
+                <img alt="" class="heading icon img-fluid" src="./assets/images/connect.png">
                 <!--<span class="heading-font">Energy and Resources Analytics Portal</span>-->
                 <!--<input type="text" placeholder="Search for special artifact..." style="border-radius: 18px;font-size: 13px;font-weight: normal;width: 25%;height:100%">-->
                 <!--  <div class="bs-searchbox">-->
@@ -25,7 +25,7 @@
                 <!--  </i>-->
               </div>
                 <!--  </div>-->
-                <img alt="" class="heading icon pull-right" src="./assets/images/deloitte_logo.png">
+                <img alt="" class="heading icon pull-right img-fluid" src="./assets/images/deloitte_logo.png">
             </div>
         </header>
         <div class='content-box'>
@@ -34,7 +34,7 @@
                     <div class="left-50-asset-block">
                         <div class="asset-block text-center">
                             <!--<img src="http://bodyworks.com/wp-content/themes/silver-quantum/images/bodyworks_cats.jpg" class="img-responsive" alt="" />-->
-                            <img alt="" class="image-map" src="./assets/images/wm1.png" usemap="#wheelMap">
+                            <img alt="" class="image-map img-fluid" src="./assets/images/wm1.png" usemap="#wheelMap">
                             <map name="wheelMap">
                               <!--Exploration (BLUE)-->
                               <area shape="poly" id="exploration"
@@ -145,8 +145,6 @@
             $('#noBullet').html(desc);
         }
         $('.areaTag').on('click mouseover', function(e) {
-            //alert('hovered,clicked');
-            console.log('e:', e.type);
             $('.areaTag').hover(function() {
                 var areaID = $(this).attr('id');
                 var image = $('#artifactImg');

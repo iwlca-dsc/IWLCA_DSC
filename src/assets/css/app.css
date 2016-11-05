@@ -154,3 +154,39 @@ input:focus{
     color: #81bc00;
     font-size: 23px;
 }
+@media only screen and (max-width: 480px) {
+  .left-30-asset-block,
+  .left-50-asset-block,
+  .left-asset-block,
+  .right-30-asset-block,
+  .right-50-asset-block,
+  .right-asset-block,
+  .top-asset-block {
+    display: table;
+    width: 100%;
+  }
+  .asset-block {
+    display: table-header-group;
+    width: 100% !important;
+  }
+  .text-block {
+    display: table-footer-group;
+    width: 100% !important;
+    padding: 15px 0 !important;
+  }
+  .text-block .date-text {
+    font-size: 9px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+  .text-block .sub-heading {
+    padding-bottom: 5px;
+    color: #6b6d6f;
+  }
+  .text-block .component-body-text {
+    font-size: 13px;
+  }
+  .no-asset-block {
+    width: 100%;
+  }
+}
