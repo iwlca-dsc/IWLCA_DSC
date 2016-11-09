@@ -95,9 +95,9 @@ ul> li {
     padding: 14px;
 }
 
-.pageHeading .navBar {
+.pageHeading .navbar .navBar {
     /* margin-top: 11px; */
-    background-color: inherit;
+    background-color: #000;
     width: 29%;
     margin-left: 4%;
     padding: 0 10px;
@@ -108,7 +108,7 @@ ul> li {
     height: 45px;
 }
 
-.pageHeading .navBar .navbaroptions {
+.pageHeading .navbar .navBar .navbaroptions {
     background-color: #fff;
     padding: 6px;
     float: left;
@@ -246,7 +246,7 @@ input:focus {
 }
 
 .searchPage {
-  border: 1px solid #000;
+    border: 1px solid #000;
     margin-top: 70px;
     min-height: 450px;
 }
@@ -268,6 +268,11 @@ input:focus {
     /*display: block;*/
 }
 
+.searchPage .searchHeader .checkbox .showFav::before {
+    vertical-align: middle;
+    font-size: small;
+}
+
 .searchPage .searchHeader .searchPhrase {
     padding: 10px;
     font-weight: bold;
@@ -286,8 +291,9 @@ input:focus {
 .searchPage .search-results .search-row {
     border-bottom: 1px solid #000;
 }
-.searchPage .search-results .search-row .lable{
-  font-weight: bold;
+
+.searchPage .search-results .search-row .lable {
+    font-weight: bold;
 }
 
 .Star {
@@ -318,7 +324,14 @@ input:focus {
 }
 
 .search-page-artifact-icon:hover {
-  /* box-shadow: 0 0 15px 5px #b0e0ee;*/
+    /* box-shadow: 0 0 15px 5px #b0e0ee;*/
+}
+
+.close.closeSearch {
+    font-size: 10px;
+    background: #fff;
+    padding: 4px;
+    display: inline-block;
 }
 
 .brighten table {
@@ -346,3 +359,69 @@ input:focus {
 .brighten-img:hover {
     -webkit-filter: brightness(120%);
 }
+
+@media (min-width:320px) {
+    /* smartphones, iPhone, portrait 480x320 phones */
+}
+
+@media (min-width:481px) {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+}
+
+@media (min-width:641px) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+}
+
+@media (min-width:961px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+
+@media (min-width:1025px) {
+    /* big landscape tablets, laptops, and desktops */
+    .list-group-item:last-child {
+        height: 290px !important;
+    }
+    .overlay {
+        height: 95%;
+    }
+}
+
+@media (min-width:1025px and max-width:1152px) {
+    .overlay {
+        width: 91.9%;
+        height: 95%;
+    }
+}
+
+@media (min-width:1281px) {
+    /* hi-res laptops and desktops */
+}
+
+@media (min-width:767px and max-width:1024px) {
+    .list-group-item:last-child {
+        width: 50% !important;
+    }
+}
+
+@media (min-width:1025px and max-width:1394px) {
+    .overlay {
+        width: 91.9%;
+        height: 95%;
+    }
+}
+
+@media (min-width:1335px) {
+    .list-group-item:last-child {
+        height: 192px !important;
+    }
+}
+
+
+/*@media (min-width:1440px) {
+    /* hi-res laptops and desktops */
+
+
+/*.list-group-item:last-child {
+        height: 95% !important;
+    }
+}*/
