@@ -1,0 +1,121 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="./assets/css/custom-bootstrap.css" type='text/css'>
+    <link rel='stylesheet' href="./assets/css/app.css" type='text/css'>
+</head>
+
+<body>
+    <div class='body-wrapper'>
+        <header class="main-header main-header-md js-header" style="">
+            <div class="pageHeading">
+                <img alt="" class="heading icon img-fluid" src="./assets/images/connect.png">
+                <div class="bs-searchbox" style="position:relative;width: 25%;height: 100%;display: inline-flex;margin-left: 31%;">
+                    <input type="text" placeholder="Search for special artifact..." class="form-control" autocomplete="off" style="/* margin-left: 35%; */border-radius: 10px;/* width: 61%; */float: left;">
+                </div>
+                <img alt="" class="heading icon pull-right img-fluid" src="./assets/images/deloitte_logo.png">
+                <nav class="navbar navbar-default">
+                    <ul class="navBar nav navbar-nav">
+                        <li class="navbaroptions" style="margin-right:7px;">E&R Home</li>
+                        <li class="navbaroptions" style="margin-right:7px;">Upstream Home</li>
+                        <li class="navbaroptions dropdown">
+                            <span>Artifact Upload</span>
+                            <i class="iwlsc-icon icon-right-dir" style="margin-left: 1px;"aria-hidden="true"></i>
+                            <ul class="artifact" style="list-style-type:none;margin-left: -41px;display:none;">
+                                <li><a class="" href="../AdminModule/AddNewArtifact.aspx" tabindex="-1"> New Artifact</a></li>
+                                <li><a class="" href="../UtilityForms/UploadArtifacts.aspx" tabindex="-1">Add Multiple Artifacts</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class='content-box'>
+            <div class="searchPage" style="margin:70px 48px;">
+                <div class="searchHeader">
+                    <div class="searchPhrase">
+                        Search Phrase : <span id="searchTerm">drilling </span><span class="close closeSearch">X</span>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="showFav" id="showFav" class="showFav" data-alert-text="Show Favourites">
+                        <label class="showFav" for="showFav">Show Favourites</label>
+                    </div>
+                </div>
+                <div class="search-results">
+                    <table style="width: 100%;min-height: 100px;margin-top:10px;">
+                        <tr class="search-row">
+                            <td style="width: 12%; vertical-align: text-top;">
+                                <label class="lable" style="padding-left: 10px;">Use Case</label></td>
+                            <td style="width: 75%;display: -webkit-box;">
+                                <asp:HiddenField ID="hdnArtifactType" runat="server" Value='<%# Eval("Artifact_Type_ID") %>' />
+                                <asp:DataList ID="dListArtifactForType" runat="server" DataKeyField="Artifact_Type_ID" RepeatDirection="Horizontal" RepeatColumns="3" CellSpacing="1" OnItemDataBound="dListArtifactForType_ItemDataBound">
+                                    <ItemTemplate>
+                                        <div class="brighten">
+                                            <asp:Image ID="imgFavorite" runat="server" Style="position: absolute; z-index: 15; width: 20px; height: 20px;" src="../../Images/Favorite.png" />
+                                            <a href='<%# "../Artifacts/ArtifactDetailForm.aspx?ArtifactID=" + Eval("ID") %>' target="_blank" style="text-decoration: none">
+                                                <table class="search-page-artifact-icon">
+                                                    <tr>
+                                                        <td rowspan="2" style="margin: auto; width: 36%">
+                                                            <img src='' width="80" height="75" border="0" style="float: left" onerror="this.src='./assets/images/Not_available_icon.jpg';" />
+
+                                                            <ajaxToolkit:Rating ID="StarRating" runat="server" StarCssClass="Star" WaitingStarCssClass="WaitingStar" EmptyStarCssClass="Star" FilledStarCssClass="FilledStar" ReadOnly="true" CurrentRating='1'>
+                                                            </ajaxToolkit:Rating>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <asp:Label ID="lblCollectiveRating" runat="server" CssClass="lable"></asp:Label>
+
+                                                        </td>
+                                                        <td style="width: 80%; height: 20px;">
+                                                            <div style="width: 100%; height: 18px; overflow: hidden;">
+                                                                <!--Hard coding for now , <%# Eval("Artifact_Name") %> -->
+                                                                <span style="color: lightgrey; font-weight: bold; font-size: 14px; font-family: Arial; word-wrap: break-word;" title='<%# Eval("Artifact_Name") %>'>Drilling and Efficiency</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="height: 60px; vertical-align: text-top; word-wrap: break-word;">
+                                                            <div style="width: 100%; height: 58px; overflow: hidden; position: relative;">
+                                                                <!--Hard coding for now , <%# Eval("Artifact_Name") %> -->
+                                                                <span style="color: white; font-weight: normal; font-size: 12px; font-family: Arial; word-wrap: break-word;" title='<%# Eval("Artifact_Desc") %>'>
+                                                                  Identify areas of potential risk during delay</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </a>
+                                            <asp:HiddenField ID="hdnArtifactID" runat="server" Value='<%# Eval("Artifact_Type_ID") %>' />
+                                        </div>
+                                    </ItemTemplate>
+                                </asp:DataList>
+                            </td>
+                            <td style="width: 13%; vertical-align: text-top; text-align: right;">
+                                <asp:HyperLink ID="btnShowAll" runat="server" Style="text-decoration: none;padding-right: 10px;">
+                                    <span class="lable">Show All</span>
+                                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    <!--<image id="ImageButton1" src="../../Images/ShowAll.png" width="45" height="20" border="0" />-->
+                                </asp:HyperLink>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+    <script src="./assets/js/jquery.js"></script>
+    <script type="text/javascript">
+        var selector = $(".navbaroptions.dropdown");
+        var artifact = $(".artifact");
+        selector.on("mouseover", function() {
+            artifact.show();
+        });
+        selector.on("mouseout", function() {
+            artifact.hide();
+        });
+    </script>
+</body>
+
+</html>
